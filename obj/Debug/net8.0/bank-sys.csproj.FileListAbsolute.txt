@@ -12,3 +12,4 @@
 /home/sushi/Documents/workspace/prog/facul/POO/bank-sys/obj/Debug/net8.0/bank-sys.pdb
 /home/sushi/Documents/workspace/prog/facul/POO/bank-sys/obj/Debug/net8.0/bank-sys.genruntimeconfig.cache
 /home/sushi/Documents/workspace/prog/facul/POO/bank-sys/obj/Debug/net8.0/ref/bank-sys.dll
+/home/sushi/Documents/workspace/prog/facul/POO/bank-sys/obj/Debug/net8.0/bank-sys.sourcelink.json

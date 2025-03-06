@@ -8,19 +8,21 @@ public class Account
   {
     Holder = initHolder;
     Balance = initBalance;
-    History.Add($"Account created for {Holder} with initial balance of R{Balance:C}");
+    History.Add($"Account created for {Holder} with initial balance of R{Balance:C} \n");
   }
 
   public void Deposit(decimal value)
   {
     if (value <= 0)
     {
-      Console.WriteLine("The deposit amount must be positive.");
+      Console.WriteLine("The deposit amount must be positive. \n");
     }
     else
     {
       Balance += value;
-      History.Add($"Deposit: R{value:C}");
+      History.Add($"Deposit: R{value:C} \n");
+      Console.Clear();
+      Console.WriteLine($"Deposit of {value:C} successful! \n");
     }
   }
 
@@ -28,30 +30,36 @@ public class Account
   {
     if (value <= 0)
     {
-      Console.WriteLine("The withdrawal amount must be positive.");
+      Console.WriteLine("The withdrawal amount must be positive. \n");
     }
     else if (value > Balance)
     {
-      Console.WriteLine("Insufficient balance for withdrawal.");
+      Console.WriteLine("Insufficient balance for withdrawal. \n");
     }
     else
     {
       Balance -= value;
-      History.Add($"Withdrawal: R{value:C}");
+      History.Add($"Withdrawal: R{value:C}\n");
+      Console.Clear();
+      Console.WriteLine($"Withdraw of {value:C} successful! \n");
     }
   }
 
   public void ShowBalance()
   {
-    Console.WriteLine($"Current balance: R{Balance:C}");
+    Console.WriteLine("\n---------------------------------------------------------\n");
+    Console.WriteLine($"Current balance: R{Balance:C} \n");
+    Console.WriteLine("---------------------------------------------------------\n");
   }
 
   public void ShowHistory()
   {
-    Console.WriteLine("\nTransaction history:");
+    Console.WriteLine("\n---------------------------------------------------------\n");
+    Console.WriteLine("Transaction history: \n");
     foreach (var item in History)
     {
       Console.WriteLine(item);
     }
+    Console.WriteLine("---------------------------------------------------------\n");
   }
 }
